@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js --ext .jsx ./src",
     "lint:fix": "prettier-eslint --parser babylon --write \"src/**/*.js\"",
     "prepublish": "npm run build:lib",
+    "postinstall": "npm run build:lib",
     "start": "webpack-dev-server --hot --host 0.0.0.0 --display-modules",
     "test": "jest"
   },
@@ -74,13 +75,7 @@
   "dependencies": {
     "element-resize-detector": "^1.1.12",
     "interact.js": "^1.2.6",
-    "lodash.isequal": "^4.5.0"
-  },
-  "peerDependencies": {
-    "moment": "*",
-    "react": "^0.14.8 || >=15"
-  },
-  "devDependencies": {
+    "lodash.isequal": "^4.5.0",
     "babel-cli": "^6.7.5",
     "babel-core": "~6.18.2",
     "babel-eslint": "^7.1.1",
@@ -126,5 +121,9 @@
     "style-loader": "~0.13.0",
     "webpack": "~1.13.3",
     "webpack-dev-server": "~1.16.2"
+  },
+  "peerDependencies": {
+    "moment": "*",
+    "react": "^0.14.8 || >=15"
   }
 }

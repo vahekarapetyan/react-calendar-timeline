@@ -759,7 +759,7 @@ export default class ReactCalendarTimeline extends Component {
     }
 
     if (this.props.onCanvasMouseMove) {
-      this.props.onCanvasMouseMove(e)
+      this.props.onCanvasMouseMove(e, timePosition)
     }
 
     if (cursorTime !== timePosition && showCursorLine) {
